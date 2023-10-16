@@ -6,10 +6,8 @@ export const ListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-radius: 4px;
   overflow: hidden;
-
   transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:first-child {
@@ -30,6 +28,8 @@ export const ListItem = styled.li`
 export const Text = styled.p`
   font-size: 16px;
   color: #19293bbe;
+
+  text-align: right;
 
   transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1),
     font-weight 200ms cubic-bezier(0.4, 0, 0.2, 1);

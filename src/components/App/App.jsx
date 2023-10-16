@@ -33,7 +33,7 @@ export const App = () => {
         toastOptions={{
           duration: 3000,
           style: {
-            width: '360px',
+            width: '340px',
             padding: '16px',
           },
         }}
