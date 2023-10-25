@@ -56,13 +56,15 @@ export const ContactList = () => {
       )}
 
       {contacts.length === 0 && !isLoading && (
-        <Text textAlign="center" fontSize="2xl">
+        <Text color={'#ffd76d'} textAlign="center">
           There are no contacts yet. Please add a new contact.
         </Text>
       )}
 
       {getVisibleContacts().length === 0 && contacts.length !== 0 && (
-        <Text>There is no such contact</Text>
+        <Text color={'#ffd76d'} textAlign="center">
+          There is no such contact
+        </Text>
       )}
 
       {contacts.length !== 0 && getVisibleContacts().length > 0 && (
