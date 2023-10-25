@@ -65,7 +65,6 @@ const Login = () => {
       onSubmit={handleSubmit(onSubmit)}
       as="form"
       mx="auto"
-      w={{ base: '90%', md: 500 }}
       p="4"
       bg="#1a1d2b"
       borderRadius={8}

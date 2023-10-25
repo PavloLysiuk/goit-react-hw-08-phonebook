@@ -10,7 +10,6 @@ const Home = () => {
       <Flex m={0} p={0}>
         <Box
           mx="auto"
-          w={{ base: '90%', md: 500 }}
           p="4"
           bg="#1a1d2b"
           borderRadius={8}

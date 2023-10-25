@@ -73,7 +73,7 @@ export const ContactList = () => {
             {stickyHeaders.map(el => (
               <ListItem key={`section-${el}`}>
                 <List>
-                  <Heading
+                  {/* <Heading
                     position="sticky"
                     top="15px"
                     color="#ffd76d"
@@ -84,7 +84,7 @@ export const ContactList = () => {
                     lineHeight={1}
                   >
                     {el}
-                  </Heading>
+                  </Heading> */}
                   <Box>
                     {createContactGroup(el).map(contact => (
                       <ContactItem key={contact.id} contact={contact} />

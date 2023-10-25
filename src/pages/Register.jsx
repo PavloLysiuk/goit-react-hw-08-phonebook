@@ -60,7 +60,7 @@ const Register = () => {
       .unwrap()
       .then(() =>
         toast({
-          title: `Registration is successfully`,
+          title: `Registration is successfully completed`,
           isClosable: true,
           position: 'top-right',
           status: 'success',
@@ -83,7 +83,6 @@ const Register = () => {
       onSubmit={handleSubmit(onSubmit)}
       as="form"
       mx="auto"
-      w={{ base: '90%', md: 500 }}
       p="4"
       bg="#1a1d2b"
       borderRadius={8}

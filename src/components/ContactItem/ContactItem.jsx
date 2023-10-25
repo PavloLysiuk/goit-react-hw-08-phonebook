@@ -18,10 +18,10 @@ export const ContactItem = ({ contact }) => {
   return (
     <ListItem
       key={contact.id}
-      paddingLeft={{ base: '12px', md: '24px', lg: '24px' }}
-      paddingRight={{ base: '12px', md: '12px' }}
-      paddingTop={1}
-      paddingBottom={1}
+      paddingLeft="12px"
+      paddingRight="12px"
+      paddingTop="4px"
+      paddingBottom="4px"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
