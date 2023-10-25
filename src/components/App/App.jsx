@@ -1,43 +1,85 @@
-import { GlobalStyle } from 'GlobalStyles';
-import { Container } from './App.styled';
-import { ContactForm } from 'components/ContactForm/ContactForm';
-import { ContactList } from 'components/ContactList/ContactList';
-import toast, { Toaster } from 'react-hot-toast';
-import { selectError } from 'redux/selectors';
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectContactsError, selectToken } from 'redux/selectors';
+import { lazy, useEffect } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Layout } from 'components/Layout/Layout';
+import { currentUser, logout, token } from 'redux/auth/authOperations';
+import { PrivateRoute } from 'components/PrivateRoute';
+import { PublicRoute } from 'components/PublicRoute';
+import { useToast } from '@chakra-ui/react';
+
+const Home = lazy(() => import('pages/Home'));
+const Contacts = lazy(() => import('pages/Contacts'));
+const Login = lazy(() => import('pages/Login'));
+const Register = lazy(() => import('pages/Register'));
 
 export const App = () => {
-  const error = useSelector(selectError);
+  const error = useSelector(selectContactsError);
+  const dispatch = useDispatch();
+  const toast = useToast();
+  const access_token = useSelector(selectToken);
 
   useEffect(() => {
     if (error) {
-      toast.error('Something went wrong, please try again later', {
-        style: {
-          background: '#ffd500',
-        },
+      toast({
+        title: 'Something went wrong, please try again later',
+        isClosable: true,
+        position: 'top-right',
+        status: 'error',
+        duration: 3000,
       });
     }
-  }, [error]);
+  }, [error, toast]);
+
+  useEffect(() => {
+    if (access_token) {
+      token.set(access_token);
+      dispatch(currentUser())
+        .unwrap()
+        .then(() => {})
+        .catch(() => {
+          dispatch(logout());
+        });
+    }
+  }, [access_token, dispatch]);
 
   return (
-    <Container>
-      <ContactForm />
-      <ContactList />
-      <GlobalStyle />
-      <Toaster
-        gutter={4}
-        containerStyle={{
-          top: 53,
-        }}
-        toastOptions={{
-          duration: 3000,
-          style: {
-            width: '340px',
-            padding: '16px',
-          },
-        }}
-      />
-    </Container>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route
+          index
+          element={
+            <PublicRoute>
+              <Home />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="register"
+          element={
+            <PublicRoute>
+              <Register />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="login"
+          element={
+            <PublicRoute>
+              <Login />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="contacts"
+          element={
+            <PrivateRoute>
+              <Contacts />
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace={true} />}></Route>
+      </Route>
+    </Routes>
   );
 };
