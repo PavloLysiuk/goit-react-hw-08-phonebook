@@ -24,12 +24,14 @@ export const Filter = () => {
             pos="relative"
             bg={'#1a1d2b'}
             borderColor={'#ffd86d78'}
+            borderRadius="8px"
+            border="none"
           />
           <SearchIcon
             pos="absolute"
             top="50%"
-            transform="translateY(-50%)"
             right="16px"
+            transform="translateY(-50%)"
             zIndex={2}
             color="#ffd76d"
           />

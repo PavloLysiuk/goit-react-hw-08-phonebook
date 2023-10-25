@@ -119,7 +119,7 @@ export const ContactForm = () => {
       maxH="fit"
       p={4}
       bg="#1a1d2b"
-      borderRadius={8}
+      borderRadius="8px"
     >
       <Heading color=" #ffd765">Add new contact</Heading>
 

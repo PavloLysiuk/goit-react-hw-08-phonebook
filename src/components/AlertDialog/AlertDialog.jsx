@@ -46,7 +46,12 @@ export const WarningAlert = ({ onClick, isDeleting }) => {
       >
         <AlertDialogOverlay />
 
-        <AlertDialogContent w="320px" bg="#1a1d2b" boxShadow={'none'}>
+        <AlertDialogContent
+          w="320px"
+          bg="#1a1d2b"
+          boxShadow={'none'}
+          borderRadius="8px"
+        >
           <AlertDialogHeader color="#ffd76d">
             Deleting contact
           </AlertDialogHeader>

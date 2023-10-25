@@ -26,7 +26,8 @@ export const ContactItem = ({ contact }) => {
       alignItems="center"
       justifyContent="space-between"
       bg={'#1a1d2b'}
-      borderRadius="4px"
+      borderRadius="8px"
+      mb="4px"
     >
       <Box flexBasis="40%">{contact.name} </Box>
       <Box flexBasis="40%">{formatPhoneNumber(contact.number)}</Box>
