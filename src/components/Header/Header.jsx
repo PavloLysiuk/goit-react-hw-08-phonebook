@@ -21,6 +21,7 @@ export const Header = () => {
       }}
       p={4}
       gap={22}
+      h="70px"
     >
       <HeaderNav className="navigation">
         {!isLoggedIn && !isLoading ? (
