@@ -11,7 +11,6 @@ import {
   Box,
   Center,
   CircularProgress,
-  Heading,
   List,
   ListItem,
   Text,
