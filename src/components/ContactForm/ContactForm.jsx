@@ -133,6 +133,8 @@ export const ContactForm = () => {
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('name')}
             bg={'#161821'}
+            _hover={{ borderColor: '#ffd76d' }}
+            _focus={{ borderColor: '#ffd76d' }}
           />
         </InputGroup>
         <FormErrorMessage>
@@ -153,6 +155,8 @@ export const ContactForm = () => {
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('number')}
             bg={'#161821'}
+            _hover={{ borderColor: '#ffd76d' }}
+            _focus={{ borderColor: '#ffd76d' }}
           />
         </InputGroup>
         <FormErrorMessage>

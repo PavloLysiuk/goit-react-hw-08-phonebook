@@ -99,6 +99,8 @@ export const EditForm = ({ onCancel, contact }) => {
           {...register('name')}
           defaultValue={contact?.name}
           bg={'#161821'}
+          _hover={{ borderColor: '#ffd76d' }}
+          _focus={{ borderColor: '#ffd76d' }}
         />
       </FormControl>
 
@@ -111,6 +113,8 @@ export const EditForm = ({ onCancel, contact }) => {
           {...register('number')}
           defaultValue={contact?.number}
           bg={'#161821'}
+          _hover={{ borderColor: '#ffd76d' }}
+          _focus={{ borderColor: '#ffd76d' }}
         />
       </FormControl>
 

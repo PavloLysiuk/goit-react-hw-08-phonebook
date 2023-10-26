@@ -102,6 +102,8 @@ const Register = () => {
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('name')}
             bg={'#161821'}
+            _hover={{ borderColor: '#ffd76d' }}
+            _focus={{ borderColor: '#ffd76d' }}
           />
         </InputGroup>
         <FormErrorMessage>
@@ -123,6 +125,8 @@ const Register = () => {
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('email')}
             bg={'#161821'}
+            _hover={{ borderColor: '#ffd76d' }}
+            _focus={{ borderColor: '#ffd76d' }}
           />
         </InputGroup>
 
@@ -143,6 +147,8 @@ const Register = () => {
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('password')}
             bg={'#161821'}
+            _hover={{ borderColor: '#ffd76d' }}
+            _focus={{ borderColor: '#ffd76d' }}
           />
           <InputLeftElement pointerEvents="none">
             <LockIcon color={'#ffd76d'} />
