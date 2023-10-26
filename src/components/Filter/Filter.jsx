@@ -13,7 +13,7 @@ export const Filter = () => {
   return (
     <>
       {contacts.length !== 0 && (
-        <FormControl mb="24px">
+        <FormControl mb="24px" p="16px" bg={'#1a1d2b'} borderRadius="8px">
           <Input
             name="filter"
             placeholder="Find contacts by name or phone number"
@@ -22,15 +22,17 @@ export const Filter = () => {
             value={filterValue}
             onChange={event => dispatch(setFilter(event.target.value))}
             pos="relative"
-            bg={'#1a1d2b'}
-            borderColor={'#ffd86d78'}
+            bg={'#161821'}
             borderRadius="8px"
-            border="none"
+            color="#ffffff"
+            borderColor="#ffd76d55"
+            _hover={{ borderColor: '#ffd76d' }}
+            _focus={{ borderColor: '#ffd76d' }}
           />
           <SearchIcon
             pos="absolute"
             top="50%"
-            right="16px"
+            right="28px"
             transform="translateY(-50%)"
             zIndex={2}
             color="#ffd76d"

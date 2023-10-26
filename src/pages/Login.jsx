@@ -99,12 +99,12 @@ const Login = () => {
           <Input
             pr="4.5rem"
             type={show ? 'text' : 'password'}
-            color="#ffffff"
-            borderColor="#ffd76d55"
             placeholder="Enter password"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('password')}
             bg={'#161821'}
+            color="#ffffff"
+            borderColor="#ffd76d55"
             _hover={{ borderColor: '#ffd76d' }}
             _focus={{ borderColor: '#ffd76d' }}
           />
