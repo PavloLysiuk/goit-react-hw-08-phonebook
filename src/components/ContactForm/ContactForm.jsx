@@ -89,7 +89,7 @@ export const ContactForm = () => {
       .unwrap()
       .then(() => {
         toast({
-          title: `Contact has been added`,
+          title: `${name} is added to contacts`,
           isClosable: true,
           position: 'top-right',
           status: 'success',
@@ -129,7 +129,7 @@ export const ContactForm = () => {
             type="text"
             color="#ffffff"
             borderColor="#ffd76d55"
-            placeholder="Enter contact name"
+            placeholder="Full Name (Example: Pavlo Lysiuk)"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('name')}
             bg={'#161821'}
@@ -149,7 +149,7 @@ export const ContactForm = () => {
             color="#ffffff"
             type="tel"
             borderColor="#ffd76d55"
-            placeholder="Enter phone number"
+            placeholder="Phone number (Example: XXXXXXX)"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('number')}
             bg={'#161821'}
