@@ -5,7 +5,6 @@ import * as yup from 'yup';
 import { addContact } from 'redux/contacts/contactsOperations';
 import { selectContacts, selectContactsLoading } from 'redux/selectors';
 import {
-  Avatar,
   Button,
   FormControl,
   FormErrorMessage,
@@ -17,6 +16,7 @@ import {
 import { useEffect, useState } from 'react';
 import { useToast } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
+import { IoMdContact } from 'react-icons/io';
 
 export const schema = yup
   .object({
@@ -123,7 +123,7 @@ export const ContactForm = () => {
       <FormControl isInvalid={errors.name} isRequired>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
-            <Avatar bg={'#ffd76d'} size="xs" />
+            <IoMdContact color="#ffd76d" size={24} />
           </InputLeftElement>
           <Input
             type="text"

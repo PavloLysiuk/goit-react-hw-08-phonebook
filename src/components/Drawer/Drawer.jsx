@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Button,
   Drawer,
   DrawerBody,
@@ -9,6 +8,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { useRef } from 'react';
+import { IoMdContact } from 'react-icons/io';
 
 export const MobileMenu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -23,7 +23,7 @@ export const MobileMenu = ({ children }) => {
         variant="ghost"
         p={0}
       >
-        <Avatar bg="#ffd76d" size="sm" />
+        <IoMdContact color="#ffd76d" size={40} />
       </Button>
       <Drawer
         isOpen={isOpen}

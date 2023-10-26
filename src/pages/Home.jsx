@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { IoIosContacts } from 'react-icons/io';
+import { RiContactsBookFill } from 'react-icons/ri';
 
 const { Heading, Center, Flex, Button, Box } = require('@chakra-ui/react');
 
@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Box mx="auto" p="4" bg="#1a1d2b" borderRadius={8}>
         <Center height="100%" flexDirection="column" p={16}>
-          <IoIosContacts size={80} color="#ffd76d" />
+          <RiContactsBookFill size={80} color="#ffd76d" />
           <Heading color="#ffffff" mb={12}>
             PHONEBOOK
           </Heading>
