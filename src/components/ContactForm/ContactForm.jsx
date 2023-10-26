@@ -130,6 +130,8 @@ export const ContactForm = () => {
           </InputLeftElement>
           <Input
             type="text"
+            color="#ffffff"
+            borderColor="#ffd76d55"
             placeholder="Enter contact name"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('name')}
@@ -147,7 +149,9 @@ export const ContactForm = () => {
             <PhoneIcon color={'#ffd76d'} />
           </InputLeftElement>
           <Input
+            color="#ffffff"
             type="tel"
+            borderColor="#ffd76d55"
             placeholder="Enter phone number"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('number')}
@@ -162,8 +166,11 @@ export const ContactForm = () => {
       <Button
         type="submit"
         variant="outline"
-        color="#ffd76d"
         isLoading={isLoading && isClicked}
+        color="#ffd76d"
+        borderColor={'#ffd76d55'}
+        _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+        _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
         mt="2px"
       >
         Add contact

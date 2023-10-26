@@ -55,16 +55,37 @@ export const WarningAlert = ({ onClick, isDeleting }) => {
           <AlertDialogHeader color="#ffd76d">
             Deleting contact
           </AlertDialogHeader>
-          <AlertDialogCloseButton />
-          <AlertDialogBody>
+          <AlertDialogCloseButton
+            color="#ffffff"
+            _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+            _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
+          />
+          <AlertDialogBody color="#ffffff">
             <WarningIcon mr="8px" color="#ff2e4d" />
             Are you sure? You can't undo this.
           </AlertDialogBody>
           <AlertDialogFooter>
-            <Button isLoading={isDeleting} onClick={onClick} color="#ffd76d">
+            <Button
+              isLoading={isDeleting}
+              onClick={onClick}
+              variant="outline"
+              color="#ffd76d"
+              borderColor={'#ffd76d55'}
+              _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+              _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
+            >
               Yes
             </Button>
-            <Button ref={cancelRef} onClick={onClose} ml={3} color="#ffd76d">
+            <Button
+              ref={cancelRef}
+              onClick={onClose}
+              ml={3}
+              variant="outline"
+              color="#ffd76d"
+              borderColor={'#ffd76d55'}
+              _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+              _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
+            >
               No
             </Button>
           </AlertDialogFooter>

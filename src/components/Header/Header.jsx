@@ -26,11 +26,15 @@ export const Header = () => {
       <HeaderNav className="navigation">
         {!isLoggedIn && !isLoading ? (
           <HeaderNavLink to="/">
-            <Heading size="md">Home</Heading>
+            <Heading color="#ffffff" size="md">
+              Home
+            </Heading>
           </HeaderNavLink>
         ) : (
           <HeaderNavLink to="/contacts">
-            <Heading size="md">Contacts</Heading>
+            <Heading color="#ffffff" size="md">
+              Contacts
+            </Heading>
           </HeaderNavLink>
         )}
       </HeaderNav>

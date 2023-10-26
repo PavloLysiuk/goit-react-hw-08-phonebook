@@ -87,15 +87,16 @@ const Register = () => {
       bg="#1a1d2b"
       borderRadius={8}
     >
-      <Heading>Register</Heading>
+      <Heading color="#ffffff">Register</Heading>
 
       <FormControl isInvalid={errors.name} isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel color="#ffffff">Name</FormLabel>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
             <Avatar bg="#ffd76d" size="xs" />
           </InputLeftElement>
           <Input
+            color="#ffffff"
             type="text"
             placeholder="Enter your name"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
@@ -109,12 +110,13 @@ const Register = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.email} isRequired>
-        <FormLabel>Email</FormLabel>
+        <FormLabel color="#ffffff">Email</FormLabel>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
             <EmailIcon color={'#ffd76d'} />
           </InputLeftElement>
           <Input
+            color="#ffffff"
             type="email"
             placeholder="Enter your email"
             _placeholder={{ opacity: 0.5, color: 'inherit' }}
@@ -129,9 +131,10 @@ const Register = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.password} isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel color="#ffffff">Password</FormLabel>
         <InputGroup size="md">
           <Input
+            color="#ffffff"
             pr="4.5rem"
             type={show ? 'text' : 'password'}
             placeholder="Enter password"

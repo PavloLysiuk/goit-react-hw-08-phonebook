@@ -25,6 +25,7 @@ export const ContactItem = ({ contact }) => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
+      color="#ffffff"
       bg={'#1a1d2b'}
       borderRadius="8px"
       mb="4px"

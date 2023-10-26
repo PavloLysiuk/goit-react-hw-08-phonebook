@@ -5,10 +5,10 @@ export const AuthNav = () => {
   return (
     <>
       <HeaderNavLink to="/login">
-        <Heading size="md">Login</Heading>
+        <Heading color="#ffffff" size="md">Login</Heading>
       </HeaderNavLink>
       <HeaderNavLink to="/register">
-        <Heading size="md">Register</Heading>
+        <Heading color="#ffffff" size="md">Register</Heading>
       </HeaderNavLink>
     </>
   );

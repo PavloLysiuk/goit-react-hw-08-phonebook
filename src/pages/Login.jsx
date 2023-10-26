@@ -69,16 +69,18 @@ const Login = () => {
       bg="#1a1d2b"
       borderRadius={8}
     >
-      <Heading>Login</Heading>
+      <Heading color="#ffffff">Login</Heading>
 
       <FormControl isInvalid={errors.email} isRequired>
-        <FormLabel>Email</FormLabel>
+        <FormLabel color="#ffffff">Email</FormLabel>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
             <EmailIcon color={'#ffd76d'} />
           </InputLeftElement>
           <Input
             type="email"
+            color="#ffffff"
+            borderColor="#ffd76d55"
             placeholder="Enter your email"
             _placeholder={{ opacity: 0.5, color: 'inherit' }}
             {...register('email')}
@@ -91,11 +93,13 @@ const Login = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.password} isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel color="#ffffff">Password</FormLabel>
         <InputGroup size="md">
           <Input
             pr="4.5rem"
             type={show ? 'text' : 'password'}
+            color="#ffffff"
+            borderColor="#ffd76d55"
             placeholder="Enter password"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('password')}

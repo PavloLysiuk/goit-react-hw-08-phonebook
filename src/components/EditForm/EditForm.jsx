@@ -89,8 +89,9 @@ export const EditForm = ({ onCancel, contact }) => {
   return (
     <VStack as="form" onSubmit={handleSubmit(onSubmit)} p={4}>
       <FormControl isInvalid={errors.name} isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel color="#ffffff">Name</FormLabel>
         <Input
+          color="#ffffff"
           type="text"
           {...register('name')}
           defaultValue={contact?.name}
@@ -99,8 +100,9 @@ export const EditForm = ({ onCancel, contact }) => {
       </FormControl>
 
       <FormControl isInvalid={errors.number} isRequired>
-        <FormLabel>Phone</FormLabel>
+        <FormLabel color="#ffffff">Phone</FormLabel>
         <Input
+          color="#ffffff"
           type="tel"
           {...register('number')}
           defaultValue={contact?.number}
@@ -113,11 +115,22 @@ export const EditForm = ({ onCancel, contact }) => {
           isLoading={isSubmitting}
           type="submit"
           isDisabled={!isValid}
+          variant="outline"
           color="#ffd76d"
+          borderColor={'#ffd76d55'}
+          _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+          _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
         >
           Save
         </Button>
-        <Button onClick={onCancel} variant="outline" color="#ffd76d">
+        <Button
+          onClick={onCancel}
+          variant="outline"
+          color="#ffd76d"
+          borderColor={'#ffd76d55'}
+          _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+          _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
+        >
           Cancel
         </Button>
       </ButtonGroup>

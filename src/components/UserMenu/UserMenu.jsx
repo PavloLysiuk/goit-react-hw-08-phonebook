@@ -12,15 +12,20 @@ export const UserMenu = () => {
     <>
       <Flex gap={2} alignItems="center">
         <Avatar bg="#ffd76d" size="sm" />
-        <Heading size="md">{userName}</Heading>
+        <Heading color="#ffffff" size="md">
+          {userName}
+        </Heading>
       </Flex>
 
       <Button
         type="button"
         onClick={() => dispatch(logout())}
         variant="outline"
-        color="#ffd76d"
         isLoading={isLoading}
+        color="#ffd76d"
+        borderColor={'#ffd76d55'}
+        _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+        _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
       >
         Log out
       </Button>
