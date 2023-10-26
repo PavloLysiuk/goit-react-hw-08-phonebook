@@ -1,8 +1,8 @@
-import { Flex, Heading } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from 'redux/auth/authOperations';
 import { selectAuthLoading, selectUserName } from 'redux/selectors';
 import { MdLogout } from 'react-icons/md';
+import { Flex, Heading } from '@chakra-ui/react';
 
 export const UserMenu = () => {
   const userName = useSelector(selectUserName);

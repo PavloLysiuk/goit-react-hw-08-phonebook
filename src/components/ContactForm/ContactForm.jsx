@@ -4,6 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { addContact } from 'redux/contacts/contactsOperations';
 import { selectContacts, selectContactsLoading } from 'redux/selectors';
+import { useEffect, useState } from 'react';
+import { IoMdContact } from 'react-icons/io';
+import { useToast } from '@chakra-ui/react';
+import { PhoneIcon } from '@chakra-ui/icons';
 import {
   Button,
   FormControl,
@@ -13,10 +17,6 @@ import {
   InputLeftElement,
   VStack,
 } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
-import { useToast } from '@chakra-ui/react';
-import { PhoneIcon } from '@chakra-ui/icons';
-import { IoMdContact } from 'react-icons/io';
 
 export const schema = yup
   .object({

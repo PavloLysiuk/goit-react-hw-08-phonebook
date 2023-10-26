@@ -1,3 +1,9 @@
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from 'components/ContactForm/ContactForm';
+import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateContact } from 'redux/contacts/contactsOperations';
+import { selectContacts } from 'redux/selectors';
 import {
   Button,
   ButtonGroup,
@@ -7,12 +13,6 @@ import {
   VStack,
   useToast,
 } from '@chakra-ui/react';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { schema } from 'components/ContactForm/ContactForm';
-import { useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateContact } from 'redux/contacts/contactsOperations';
-import { selectContacts } from 'redux/selectors';
 
 export const EditForm = ({ onCancel, contact }) => {
   const {

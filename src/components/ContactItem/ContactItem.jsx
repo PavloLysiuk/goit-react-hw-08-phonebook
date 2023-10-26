@@ -1,10 +1,10 @@
-import { Box, ListItem } from '@chakra-ui/react';
 import { PopoverForm } from 'components/Popover/Popover';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/contactsOperations';
 import { WarningAlert } from '../AlertDialog/AlertDialog';
 import { formatPhoneNumber } from 'utils/formatPhoneNumber';
+import { Box, ListItem } from '@chakra-ui/react';
 
 export const ContactItem = ({ contact }) => {
   const [isDeleting, setIsDeleting] = useState(false);

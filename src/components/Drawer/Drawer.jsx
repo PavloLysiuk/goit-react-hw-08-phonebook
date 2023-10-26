@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { IoMdContact } from 'react-icons/io';
 import {
   Button,
   Drawer,
@@ -7,8 +9,6 @@ import {
   DrawerOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
-import { useRef } from 'react';
-import { IoMdContact } from 'react-icons/io';
 
 export const MobileMenu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

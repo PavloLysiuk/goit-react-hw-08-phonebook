@@ -1,8 +1,8 @@
-import { SearchIcon } from '@chakra-ui/icons';
 import { FormControl, Input } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
 import { selectContacts, selectFilter } from 'redux/selectors';
+import { SearchIcon } from '@chakra-ui/icons';
 
 export const Filter = () => {
   const filterValue = useSelector(selectFilter);

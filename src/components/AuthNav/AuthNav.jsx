@@ -1,5 +1,5 @@
-import { Heading } from '@chakra-ui/react';
 import { HeaderNavLink } from 'components/Header/Header.styled';
+import { Heading } from '@chakra-ui/react';
 
 export const AuthNav = () => {
   return (

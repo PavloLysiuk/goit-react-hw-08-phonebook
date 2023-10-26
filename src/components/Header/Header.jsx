@@ -1,10 +1,10 @@
-import { Box, Flex, Heading, Spacer } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 import { selectAuthLoading, selectIsLoggedIn } from 'redux/selectors';
 import { HeaderNav, HeaderNavLink } from './Header.styled';
 import { MobileMenu } from 'components/Drawer/Drawer';
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { UserMenu } from 'components/UserMenu/UserMenu';
+import { Box, Flex, Heading, Spacer } from '@chakra-ui/react';
 
 export const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

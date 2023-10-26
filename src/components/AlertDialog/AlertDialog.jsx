@@ -1,4 +1,6 @@
 import { DeleteIcon } from '@chakra-ui/icons';
+import { WarningIcon } from '@chakra-ui/icons';
+import { useRef } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -11,8 +13,6 @@ import {
   CircularProgress,
   useDisclosure,
 } from '@chakra-ui/react';
-import { WarningIcon } from '@chakra-ui/icons';
-import { useRef } from 'react';
 
 export const WarningAlert = ({ onClick, isDeleting }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

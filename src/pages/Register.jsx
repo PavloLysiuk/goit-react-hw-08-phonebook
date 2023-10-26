@@ -1,3 +1,12 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { useNavigate } from 'react-router-dom';
+import { signup } from 'redux/auth/authOperations';
+import { selectAuthLoading } from 'redux/selectors';
+import { EmailIcon, LockIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 import {
   FormControl,
   FormLabel,
@@ -12,16 +21,6 @@ import {
   InputRightElement,
   Avatar,
 } from '@chakra-ui/react';
-
-import { useDispatch, useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { useNavigate } from 'react-router-dom';
-import { signup } from 'redux/auth/authOperations';
-import { selectAuthLoading } from 'redux/selectors';
-import { EmailIcon, LockIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
 
 const schema = yup
   .object({
