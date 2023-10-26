@@ -96,8 +96,9 @@ const Register = () => {
             <Avatar bg="#ffd76d" size="xs" />
           </InputLeftElement>
           <Input
-            color="#ffffff"
             type="text"
+            color="#ffffff"
+            borderColor="#ffd76d55"
             placeholder="Enter your name"
             _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('name')}
@@ -116,10 +117,11 @@ const Register = () => {
             <EmailIcon color={'#ffd76d'} />
           </InputLeftElement>
           <Input
-            color="#ffffff"
             type="email"
+            color="#ffffff"
+            borderColor="#ffd76d55"
             placeholder="Enter your email"
-            _placeholder={{ opacity: 0.5, color: 'inherit' }}
+            _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('email')}
             bg={'#161821'}
           />
@@ -134,11 +136,12 @@ const Register = () => {
         <FormLabel color="#ffffff">Password</FormLabel>
         <InputGroup size="md">
           <Input
-            color="#ffffff"
             pr="4.5rem"
+            color="#ffffff"
+            borderColor="#ffd76d55"
             type={show ? 'text' : 'password'}
             placeholder="Enter password"
-            _placeholder={{ opacity: 0.5, color: 'inherit' }}
+            _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('password')}
             bg={'#161821'}
           />
@@ -167,18 +170,23 @@ const Register = () => {
 
       <Button
         type="submit"
-        variant="outline"
-        color={'#ffd76d'}
         isLoading={isLoading}
         mt="4"
+        variant="outline"
+        color="#ffd76d"
+        borderColor={'#ffd76d55'}
+        _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+        _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
       >
         Sign Up
       </Button>
 
       <Button
         onClick={() => navigate('/login')}
-        color={'#ffd76d'}
         variant="ghost"
+        color={'#ffd76d'}
+        _hover={{ color: '#ffffff', bg: '#ffffff10' }}
+        _focus={{ color: '#ffffff', bg: '#ffffff10' }}
       >
         Click here if you already have an account
       </Button>

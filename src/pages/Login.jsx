@@ -82,7 +82,7 @@ const Login = () => {
             color="#ffffff"
             borderColor="#ffd76d55"
             placeholder="Enter your email"
-            _placeholder={{ opacity: 0.5, color: 'inherit' }}
+            _placeholder={{ opacity: 0.5, color: '#ffd76d' }}
             {...register('email')}
             bg={'#161821'}
           />
@@ -131,18 +131,23 @@ const Login = () => {
 
       <Button
         type="submit"
-        variant="outline"
-        color={'#ffd76d'}
         isLoading={isLoading}
         mt="4"
+        variant="outline"
+        color="#ffd76d"
+        borderColor={'#ffd76d55'}
+        _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+        _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
       >
         Login
       </Button>
 
       <Button
         onClick={() => navigate('/register')}
-        color={'#ffd76d'}
         variant="ghost"
+        color={'#ffd76d'}
+        _hover={{ color: '#ffffff', bg: '#ffffff10' }}
+        _focus={{ color: '#ffffff', bg: '#ffffff10' }}
       >
         Click here if you don't have an account
       </Button>

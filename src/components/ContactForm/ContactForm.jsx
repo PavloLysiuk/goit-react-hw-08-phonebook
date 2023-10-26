@@ -165,8 +165,8 @@ export const ContactForm = () => {
 
       <Button
         type="submit"
-        variant="outline"
         isLoading={isLoading && isClicked}
+        variant="outline"
         color="#ffd76d"
         borderColor={'#ffd76d55'}
         _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}

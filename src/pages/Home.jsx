@@ -8,12 +8,7 @@ const Home = () => {
   return (
     <Center>
       <Flex m={0} p={0}>
-        <Box
-          mx="auto"
-          p="4"
-          bg="#1a1d2b"
-          borderRadius={8}
-        >
+        <Box mx="auto" p="4" bg="#1a1d2b" borderRadius={8}>
           <Center height="100%" flexDirection="column" p={16}>
             <IoIosContacts size={80} color="#ffd76d" />
             <Heading mb={12}>PHONEBOOK</Heading>
@@ -22,15 +17,22 @@ const Home = () => {
               <Button
                 type="button"
                 onClick={() => navigate('/login')}
-                bg="#ffd76d"
+                variant="outline"
+                color="#ffd76d"
+                borderColor={'#ffd76d55'}
+                _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+                _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
               >
                 Login
               </Button>
               <Button
                 type="button"
                 onClick={() => navigate('/register')}
-                color="#ffd76d"
                 variant="outline"
+                color="#ffd76d"
+                borderColor={'#ffd76d55'}
+                _hover={{ color: '#1a1d2b', bg: '#ffd76d' }}
+                _focus={{ color: '#1a1d2b', bg: '#ffd76d' }}
               >
                 Register
               </Button>
