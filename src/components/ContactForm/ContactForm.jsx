@@ -9,7 +9,6 @@ import {
   Button,
   FormControl,
   FormErrorMessage,
-  Heading,
   Input,
   InputGroup,
   InputLeftElement,
@@ -121,8 +120,6 @@ export const ContactForm = () => {
       bg="#1a1d2b"
       borderRadius="8px"
     >
-      <Heading color=" #ffd765">Add new contact</Heading>
-
       <FormControl isInvalid={errors.name} isRequired>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
