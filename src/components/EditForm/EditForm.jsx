@@ -48,13 +48,14 @@ export const EditForm = ({ onCancel, contact }) => {
         duration: 3000,
       });
     }
-    if (
-      contacts.find(
-        contactInList =>
-          contactInList.number === number &&
-          contactInList.number !== contact.number
-      )
-    ) {
+
+    const existContact = contacts.find(
+      contactInList =>
+        contactInList.number === number &&
+        contactInList.number !== contact.number
+    );
+
+    if (existContact) {
       return toast({
         title: `${number} is already in contacts`,
         isClosable: true,
@@ -63,6 +64,7 @@ export const EditForm = ({ onCancel, contact }) => {
         duration: 3000,
       });
     }
+
     dispatch(updateContact({ id: contact.id, body: { name, number } }))
       .unwrap()
       .then(() => {
@@ -91,8 +93,9 @@ export const EditForm = ({ onCancel, contact }) => {
       <FormControl isInvalid={errors.name} isRequired>
         <FormLabel color="#ffffff">Name</FormLabel>
         <Input
-          color="#ffffff"
           type="text"
+          color="#ffffff"
+          borderColor="#ffd76d55"
           {...register('name')}
           defaultValue={contact?.name}
           bg={'#161821'}
@@ -102,8 +105,9 @@ export const EditForm = ({ onCancel, contact }) => {
       <FormControl isInvalid={errors.number} isRequired>
         <FormLabel color="#ffffff">Phone</FormLabel>
         <Input
-          color="#ffffff"
           type="tel"
+          color="#ffffff"
+          borderColor="#ffd76d55"
           {...register('number')}
           defaultValue={contact?.number}
           bg={'#161821'}

@@ -11,7 +11,9 @@ const Home = () => {
         <Box mx="auto" p="4" bg="#1a1d2b" borderRadius={8}>
           <Center height="100%" flexDirection="column" p={16}>
             <IoIosContacts size={80} color="#ffd76d" />
-            <Heading mb={12}>PHONEBOOK</Heading>
+            <Heading color="#ffffff" mb={12}>
+              PHONEBOOK
+            </Heading>
 
             <Flex gap={2}>
               <Button

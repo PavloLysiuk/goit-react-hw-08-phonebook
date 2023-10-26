@@ -115,6 +115,8 @@ const Login = () => {
               size="sm"
               onClick={handleClick}
               background="transparent"
+              _hover={{ bg: '#1a1d2b' }}
+              _focus={{ bg: '#1a1d2b' }}
             >
               {show ? (
                 <ViewOffIcon color={'#ff2e4d'} />
