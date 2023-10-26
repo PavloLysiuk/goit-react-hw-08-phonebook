@@ -13,7 +13,7 @@ export const Filter = () => {
   return (
     <>
       {contacts.length !== 0 && (
-        <FormControl mb={2}>
+        <FormControl mb="24px">
           <Input
             name="filter"
             placeholder="Find contacts by name or phone number"
