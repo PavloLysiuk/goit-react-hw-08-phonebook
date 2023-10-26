@@ -62,7 +62,7 @@ export const ContactList = () => {
 
       {getVisibleContacts().length === 0 && contacts.length !== 0 && (
         <Text color={'#ffd76d'} textAlign="center">
-          There is no such contact
+          There is no such contact...
         </Text>
       )}
 
